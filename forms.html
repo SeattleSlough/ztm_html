@@ -4,6 +4,47 @@
 		<title>Register</title>
 	</head>
 	<body>
-		test
+		<form action="" method="GET">
+			First Name: <input type="text" name="firtsname" /><br />
+			Last Name: <input type="text" name="lastname" /><br />
+			Email: <input type="email" name="email" required /><br />
+			Password:
+			<input type="password" name="password" minlength="7" required /><br />
+			Birthday: <input type="date" name="birthday" /><br />
+			Gender: <br />
+			<input type="radio" name="gender" value="Male" />Male<br />
+			<input type="radio" name="gender" value="Female" />Female<br />
+			<input type="radio" name="gender" value="Other" />Other<br />
+			Pets: <br />
+			<input type="checkbox" name="cat" /> Cat <br />
+			<input type="checkbox" name="dog" /> Dogs <br />
+			<input type="checkbox" name="none" /> None <br />
+			Cars: <br />
+			<select name="car">
+				<option value="volvo" name="car">Volvo</option>
+				<option value="audi" name="car">Audi</option></select
+			><br />
+			<input type="submit" value="Register" />
+			<input type="reset" />
+		</form>
 	</body>
 </html>
+
+<!--
+	QUERY STRING (starts with a '?')
+?
+firtsname=No
+&lastname=Name
+&email=no%40name.com
+&password=1234123
+&birthday=1995-07-21
+&gender=Male
+&dog=on
+&car=audi
+
+method="GET" generates this QUERY STRING (appended to URL) and sends it to the server
+
+method="POST" is attached to the body of the request
+
+POST is the prefered method for security reasons (see the PW in the clear)
+-->
